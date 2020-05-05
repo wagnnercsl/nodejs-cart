@@ -8,16 +8,7 @@ function getPromotion(products) {
 		categories.push(product.category);
 	});
 
-	switch(categories.length) {
-		case 1:
-			return promotions[0];
-		case 2:
-			return promotions[1];
-		case 3:
-			return promotions[2];
-		case 4:
-			return promotions[3];
-	}
+	return promotions[categories.length-1];
 }
 
 function getRegularPrice(products) {
